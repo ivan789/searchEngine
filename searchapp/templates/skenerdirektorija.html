@@ -1,0 +1,33 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">       
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+
+<body>
+    
+<div id="page">
+ <form action="/search"><input type="submit" value="back" /></form>
+<br/><br/><br/><br/>
+<h3>Skener direktorija</h3>
+<p>Ovdje upišete ime direktorija čije dokumente želite pretraživati, te pričekate (pričekate do trenutka kada u polju ove forme nestane vaš unos).Dakle kada nestane Vaš unos u ovom polju forme, dio logike za pretraživanje fajla je odrađen! Molim upišite točan naziv Vašeg direktorija !<br/><br/></p>
+
+    <form action='' method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+    <br/><br/><br/><br/>
+
+    <p>Ovdje upisujete nove dokumente (npr. one dokumente kojih nije bilo kada ste pokrenuli skener direktorija, pa ne želite da Vam se na novo vrti skener direktorija za sve dokumente nego samo za ove koje trenutno predajete) ili npr. dokumente koji nisi bili u direktoriju koji ste skenirali a želite da budu u search enginu itd.!</p><br/>
+ <form action="/dokumenti"><input type="submit" value="dodaj nove dokumente" /></form>
+</form>
+</form>    
+</div>
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% load staticfiles %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <script type="text/javascript" src="{% static 'script.js' %}"></script>
+
+    <link rel="stylesheet" href="{% static 'styles.css' %}">       
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+</head>
+
+<body>
+
+<div id="page">
+ 
+
+ <form action="/search"><input type="submit" value="back" /></form>
+<br/><br/><br/><br/>
+<h3>Skener novih dokumenata</h3>
+<p>Ovdje upisujete nove dokumente (npr. one dokumente kojih nije bilo kada ste pokrenuli skener direktorija, pa ne želite da Vam se na novo vrti skener direktorija za sve dokumente nego samo za ove koje trenutno predajete) ili npr. dokumente koji nisi bili u direktoriju koji ste skenirali a želite da budu u search enginu itd.!<br/><br/></p>
+
+    <form action='' method="POST" class="post-form2">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+    </form>
+
+</form>
+</form>    
+</div>
+</body>
+</html>
