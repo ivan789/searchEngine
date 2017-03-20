@@ -9,29 +9,31 @@ veliki fajl će kasnije biti korišten u kreiranju indexa i na posljetku za sear
 
 import os
 from fnmatch import fnmatch
+try:
+    root = '/'
+    pattern = "*.txt"
+    i = 0
+    for path, subdirs, files in os.walk(root):
 
-root = '/'
-pattern = "*.txt"
-i = 0
-for path, subdirs, files in os.walk(root):
-	
-    for name in files:
-        if fnmatch(name, pattern):
-            print os.path.join(path, name)
-            #print name
-            
-            with open(os.path.join(path, name)) as f:
-                i += 1
-                with open("MojaKolekcijaFajlova.dat", "a") as f1:
+        for name in files:
+            if fnmatch(name, pattern):
+                print os.path.join(path, name)
+                #print name
+                
+                with open(os.path.join(path, name)) as f:
+                    i += 1
+                    with open("MojaKolekcijaFajlova.dat", "a") as f1:
 
-                    f1.write("<page>\n")
-                    f1.write("<id>" + str(i) + "</id>\n")
-                    f1.write("<title>" + str(name) + "</title>\n")
-                    f1.write("<text>\n")
-                    for line in f:
+                        f1.write("<page>\n")
+                        f1.write("<id>" + str(i) + "</id>\n")
+                        f1.write("<title>" + str(name) + "</title>\n")
+                        f1.write("<text>\n")
+                        for line in f:
 
-                        f1.write(line)
-                    f1.write("</text>\n")
-                    f1.write("</page>\n") 
+                            f1.write(line)
+                        f1.write("</text>\n")
+                        f1.write("</page>\n")
+except:
+    print "xml tag notification" 
 
 

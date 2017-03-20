@@ -25,7 +25,7 @@ SECRET_KEY = 'vfp4(s^vlmm(%baj1q814dy!0$i-%mctl(oue*9q8fhxep74=*'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['applicationfree.net', 'localhost']
+ALLOWED_HOSTS = ['applicationfree.net', 'localhost', '88.198.72.70']
 
 
 # Application definition

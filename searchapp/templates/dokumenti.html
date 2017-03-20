@@ -15,14 +15,15 @@
 <div id="page">
  
 
- <form action="/search"><input type="submit" value="back" /></form>
+ <form action="/"><input type="submit" value=" Home " /></form>
 <br/><br/><br/><br/>
-<h3>Skener novih dokumenata</h3>
-<p>Ovdje upisujete nove dokumente (npr. one dokumente kojih nije bilo kada ste pokrenuli skener direktorija, pa ne želite da Vam se na novo vrti skener direktorija za sve dokumente nego samo za ove koje trenutno predajete) ili npr. dokumente koji nisi bili u direktoriju koji ste skenirali a želite da budu u search enginu itd.!<br/><br/></p>
+<h3>Create index for new document</h3><br/>
+<p>Please enter new documents bellow (eg. a document that not exists before you create first indexes for base directory, this is useful because you don't want create again whole indexes for all documents, so this option allow user to create index only  for new documents, like this /home/user/yourdocument.txt or just put name of your new document) !
+ <br/> <br/></p>
 
     <form action='' method="POST" class="post-form2">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+        <button type="submit" class="save btn btn-default">Create index for new document</button>
     </form>
 
 </form>

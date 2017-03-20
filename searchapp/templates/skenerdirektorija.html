@@ -13,21 +13,48 @@
 <body>
     
 <div id="page">
- <form action="/search"><input type="submit" value="back" /></form>
+ <form action="/"><input type="submit" value=" Home " /></form>
 <br/><br/><br/><br/>
-<h3>Skener direktorija</h3>
-<p>Ovdje upišete ime direktorija čije dokumente želite pretraživati, te pričekate (pričekate do trenutka kada u polju ove forme nestane vaš unos).Dakle kada nestane Vaš unos u ovom polju forme, dio logike za pretraživanje fajla je odrađen! Molim upišite točan naziv Vašeg direktorija !<br/><br/></p>
+<h3>Create index for your document!</h3><br/>
+<p>Please enter a correct name of your directory that you want search.<br/><br/></p>
 
     <form action='' method="POST" class="post-form">{% csrf_token %}
         {{ form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
-    </form>
-    <br/><br/><br/><br/>
+        <button type="submit" class="save btn btn-default"> Create index </button>
+    </form></br></br></br>
 
-    <p>Ovdje upisujete nove dokumente (npr. one dokumente kojih nije bilo kada ste pokrenuli skener direktorija, pa ne želite da Vam se na novo vrti skener direktorija za sve dokumente nego samo za ove koje trenutno predajete) ili npr. dokumente koji nisi bili u direktoriju koji ste skenirali a želite da budu u search enginu itd.!</p><br/>
- <form action="/dokumenti"><input type="submit" value="dodaj nove dokumente" /></form>
-</form>
-</form>    
+    <p  align="justify">Search engine is the popular term for an information retrieval (IR) system. While researchers and developers take a broader view of IR systems, consumers think of them more in terms of what they want the systems to do — namely search the Web, or an intranet, or a database. Actually consumers would really prefer a finding engine, rather than a search engine.
+Search engines match queries against an index that they create. The index consists of the words in each document, plus pointers to their locations within the documents. This is called an inverted file. A search engine or IR system comprises four essential modules:</br></br>
+   
+        1) A document processor</br>
+        2) A query processor</br>
+        3) A search and matching function</br>
+        4) A ranking capability</br>
+        
+
+</br>
+While users focus on "search," the search and matching function is only one of the four modules. Each of these four modules may cause the expected or unexpected results that consumers get when they use a search engine. 
+</br></br></br>
+<h3>Document Processor </h3></br>
+
+The document processor prepares, processes, and inputs the documents, pages, or sites that users search against. The document processor performs some or all of the following steps:
+</br></br>
+
+    1) Normalizes the document stream to a predefined format.</br>
+    2) Breaks the document stream into desired retrievable units.</br>
+    3) Isolates and metatags subdocument pieces.</br>
+    4) Identifies potential indexable elements in documents.</br>
+    5) Deletes stop words.</br>
+    6) Stems terms.</br>
+    7) Extracts index entries.</br>
+    8) Computes weights.</br>
+    9) Creates and updates the main inverted file against which the search engine searches in order to match queries to documents.</br>
+
+</p>
+
+
+
+ 
 </div>
 </body>
 </html>
