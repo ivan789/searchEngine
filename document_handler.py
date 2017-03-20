@@ -2,9 +2,14 @@
 # -*- coding: utf-8 -*-
 
 """
-Ovo je skriptica koja priprema željene fajlove za pretraživanje,skriptica gleda željeni direktorij
+Ako korisnik ne zeli koristiti web formu prilikom kreiranja indexa, tada moze preko ove skriptice
+generirati fajl koji je potreban za kreiranje indexa, no ako se korisnik odlucio da indexe
+kreira automatski kroz web formu (koja je napisana u Djangu i prilozena u ovom repozitoriju) 
+tako sto jednostavno preda ime direktorija za skeniranje i kreiranje indexa,tada 
+nije potrebo koristiti ovu skripticu!
+Ovo je skriptica koja priprema željene fajlove za pretraživanje,a gleda željeni direktorij
 te prolazi kroz njega i hvata sve fajlove, te ih sprema u jedan veliki fajl sa XML tagovima, a ovaj
-veliki fajl će kasnije biti korišten u kreiranju indexa i na posljetku za search dokumenata
+veliki fajl će kasnije biti korišten u kreiranju indexa i na posljetku za search dokumenata!
 """
 
 import os
