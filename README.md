@@ -1,6 +1,6 @@
 # searchEngine
 search engine (Python)
-# searchEngine
+
 
 The ability to search a specific web site for the page you are looking for is a very useful feature. However, searching can be complicated and providing a good search experience can require knowledge of multiple programming languages. This project will demonstrate a simple search engine including a sample application you can run in your own site.
 
