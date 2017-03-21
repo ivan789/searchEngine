@@ -36,18 +36,4 @@ A search index is a file or set of data built before the search is performed. Th
 
 
 
-# Document Processor 
-The document processor prepares, processes, and inputs the documents, pages, or sites that users search against. The document processor performs some or all of the following steps:
-
-* Normalizes the document stream to a predefined format.
-* Breaks the document stream into desired retrievable units.
-* Isolates and metatags subdocument pieces.
-* Identifies potential indexable elements in documents.
-* Deletes stop words.
-* Stems terms.
-* Extracts index entries.
-* Computes weights.
-* Creates and updates the main inverted file against which the search engine searches in order to match queries to documents.
-
-
 
